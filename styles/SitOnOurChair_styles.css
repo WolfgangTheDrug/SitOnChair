@@ -1,11 +1,13 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+
 }
-.main__width {
-    width: 100%;
+.main__width:not(h2) {
     display: flex;
+    justify-content: center;
+    width: 66vw;
 }
 
 header {
@@ -14,6 +16,7 @@ header {
 nav {
     justify-content: space-between;
     color: #fff;
+    padding: 10px;
 }
 .logo {
     background-color: inherit;
@@ -27,21 +30,118 @@ span {
 .main__menu {
 
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 .main__menu li {
     display: inline-block;
     list-style: none;
     font-weight: 700;
 }
-.main__menu--hoover li {
+.main__menu li:after {
     display: block;
-    list-style: none;
-    font-weight: 300;
+    content: "";
+    width: 100px;
 }
-.main__menu--hoover li:before  {
+.main__menu--hover {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+/*
+.main__menu li:first-child:hover {
+    !*display: block;*!
+    !*position: absolute;*!
+   !* z-index: 1;*!
+}
+.main__menu--hover:hover {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.main__menu--hover li:before {
     display: block;
     content: "";
     width: 50px;
     height: 50px;
-    background-color: black;
-    /*obrot o 45deg*/
+    background-color: inherit;
+    !*obrot o 45deg*!
+}*/
+
+.front {
+    background-color: #fff;
+}
+h1, h1 p {
+    display: block;
+}
+.more {
+    height: 20px;
+    width: 150px;
+}
+.white{
+    background-color: #25C8AD;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+main {
+    width: 500px;
+    margin: 0 0 0 186px;
+}
+
+.first__section {
+    border: 1px solid #25C8AD;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 10px;
+}
+.first__section:nth-of-type(1) {
+    background-image: url('/images/box1_img.jpg');
+}
+.first__section:nth-of-type(2) {
+    background-image: url('/images/box1_img.jpg');
+}
+h1, h2, h3 {
+    display: block;
+}
+h2,h3 {
+    border-bottom: 3px solid #25C8AD;
+    width: 200px;
+    height: 10%;
+    float: left;
+}
+.first__section > p {
+    clear: both;
+    margin-top: 40px;
+}
+.second__section {
+    width: 30%;
+}
+.second__section > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.circle, .darkblue, .superbright {
+    border-width: 2px;
+    border-style: solid;
+}
+.superbright {
+    border-color: #D6D6D6;
+}
+.darkblue {
+    border-color: #25C8AD;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #48CFB1;
 }
