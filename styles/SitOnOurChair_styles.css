@@ -213,3 +213,40 @@ p {
     color: white;
     padding-top: 10px;
 }
+#second__section {
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+#second__section > * {
+    margin: 10px;
+    padding: 0;
+    border: 1px solid #25C8AD;
+    height: 220px;
+    width: 320px;
+
+}
+#second__section img {
+    height: 220px;
+    width: 320px;
+}
+#second__section p {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin: 2px 5px 5px 5px;
+    line-height: 1.5em;
+    font-weight: 100;
+}
+#second__section h2 {
+    line-height: 1.9em;
+    letter-spacing: 1px;
+    width: 140px;
+    justify-content: left;
+    padding: 22px 0 0 0;
+    display: block;
+    float: left;
+    border-bottom: 7px solid #25C8AD;
+    margin-right: 150px;
+}
