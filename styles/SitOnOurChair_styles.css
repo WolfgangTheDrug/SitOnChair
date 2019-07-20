@@ -33,12 +33,14 @@
     font-style: normal;
 }
 /*KONEC CZCIONEK*/
+/*reset*/
 * {
     margin: 0;
     padding: 0;
     font-family: ralewayregular;
     font-size: 14px;
 }
+/*header*/
 header {
     width: 100%;
 }
@@ -114,12 +116,19 @@ ol>li:hover>ul:before {
     top: -.5em;
     right: 75px;
 }
-
 a {
     text-decoration: none;
     color: white;
 }
+/*sekcje*/
 section {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1d1d1', GradientType=0 );
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    padding-top: 18px;
+}
+#first__section {
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,209,209,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(209,209,209,1)));
@@ -127,19 +136,15 @@ section {
     background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,209,209,1) 100%);
     background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,209,209,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(209,209,209,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1d1d1', GradientType=0 );
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    padding-top: 18px;
+
 }
-section div:last-of-type:not(.see__more){
+#first__section div:last-of-type:not(.see__more){
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px
 }
-section:first-of-type>div {
+#first__section>div {
     height: 469px;
     width:50%;
     display: flex;
@@ -149,7 +154,7 @@ section:first-of-type>div {
     margin-right: -94px;
     float: left;
 }
-section:first-of-type>div:last-child { /*napisy obok zdj fotela*/
+#first__section>div:last-child { /*napisy obok zdj fotela*/
     height: 469px;
     width:30%;
     display: flex;
@@ -157,7 +162,7 @@ section:first-of-type>div:last-child { /*napisy obok zdj fotela*/
     padding-top: 35px;
     float: left;
 }
-section:before {
+#first__section:before {
     content: "<";
     font-size: 78px;
     font-weight: 100;
@@ -167,7 +172,7 @@ section:before {
     top:250px;
     left: 200px;
 }
-section:after {
+#first__section:after {
     content: ">";
     font-size: 78px;
     font-weight: 100;
@@ -216,7 +221,6 @@ p {
 #second__section {
     display: flex;
     justify-content: center;
-    background: white;
 }
 #second__section > * {
     margin: 10px;
@@ -239,7 +243,8 @@ p {
     line-height: 1.5em;
     font-weight: 100;
 }
-#second__section h2 {
+#second__section h3 {
+    text-align: center;
     line-height: 1.9em;
     letter-spacing: 1px;
     width: 140px;
@@ -247,6 +252,85 @@ p {
     padding: 22px 0 0 0;
     display: block;
     float: left;
-    border-bottom: 7px solid #25C8AD;
     margin-right: 150px;
+}
+#second__section>div>h3:after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 7px;
+    background-color: #25C8AD;
+}
+#third__section {
+    display: block;
+    background-color: #f1f1f1;
+    margin-top: 90px;
+    height: 600px;
+}
+
+.underline {
+    font-size: 21px;
+    line-height: 1.7em;
+    width: 320px;
+    margin-left: 80px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+.underline:after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 8px;
+    background-color: #25C8AD;
+}
+#third__section div.tables {
+    display: flex;
+    justify-content: center;
+}
+#third__section .OfferList {
+    width: 325px;
+    height: 500px;
+    padding: 25px 0 0 0;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 65px;
+    margin-right: 35px;
+    border-width: 2px;
+    border-style: solid;
+
+}
+#third__section .OfferList h3 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+}
+#third__section .OfferList .OfferList__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+.circle {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle p {
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 50px;
+}
+#third__section .OfferList > div:nth-of-type(2){
+    margin-top: 10px;
+}
+#third__section .OfferList > div:nth-of-type(2) > p {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    line-height: 2em;
 }
